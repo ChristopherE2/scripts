@@ -4,7 +4,7 @@
 # Version: 3.1
 # Date: 18/09/2022
 
-URL_BOUQUET="https://github.com/ChristopherE2/astra/raw/main/enigma2-tuxbox/astra.tar.gz"
+URL_BOUQUET="https://github.com/ChristopherE2/astra/raw/main/astra.tar.gz"
 
 ## Lamedb + Bouquet + Satellites Download ##
 cd /tmp/

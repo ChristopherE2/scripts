@@ -28,7 +28,16 @@ then
 	## Lamedb & Bouquet Reload ##
 	wget -qO - http://127.0.0.1/web/servicelistreload?mode=0
 	echo "¡Canales astra-hotbird actualizados con éxito!"
-	sleep 5s
+	echo "Reiniciando en 5 ..."
+	sleep 1s
+	echo "Reiniciando en 4 ..."
+	sleep 1s
+	echo "Reiniciando en 3 ..."
+	sleep 1s
+	echo "Reiniciando en 2 ..."
+	sleep 1s
+	echo "Reiniciando en 1 ..."
+	sleep 1s
 	wget -O /dev/null -q http://127.0.0.1/web/powerstate?newstate=3
 else
 	echo "¡Conexión a internet NOK!"

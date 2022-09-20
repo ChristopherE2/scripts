@@ -30,13 +30,13 @@ then
 	echo "¡Canales astra-hotbird actualizados con éxito!"
 	echo "Reiniciando Enigma2 en 5 ..."
 	sleep 1s
-	echo "                       4 ..."
+	echo "     "         "       4 ..."
 	sleep 1s
-	echo "                       3 ..."
+	echo "     "         "       3 ..."
 	sleep 1s
-	echo "                       2 ..."
+	echo "     "         "       2 ..."
 	sleep 1s
-	echo "                       1 ..."
+	echo "     "         "       1 ..."
 	sleep 1s
 	wget -O /dev/null -q http://127.0.0.1/web/powerstate?newstate=3
 else

@@ -1,8 +1,8 @@
 #!/bin/bash
 # Provides: ChristopherE2
 # Description: Script para actualizaciones de lista de canales astra
-# Version: 4.0
-# Date: 19/09/2022
+# Version: 4.1
+# Date: 20/09/2022
 
 URL_BOUQUET="https://github.com/ChristopherE2/astra/raw/main/astra.tar.gz"
 
@@ -28,7 +28,16 @@ then
 	## Lamedb & Bouquet Reload ##
 	wget -qO - http://127.0.0.1/web/servicelistreload?mode=0
 	echo "¡Canales astra actualizados con éxito!"
-	sleep 5s
+	echo "Reiniciando Enigma2 en 5 ..."
+	sleep 1s
+	echo "                       4 ..."
+	sleep 1s
+	echo "                       3 ..."
+	sleep 1s
+	echo "                       2 ..."
+	sleep 1s
+	echo "                       1 ..."
+	sleep 1s
 	wget -O /dev/null -q http://127.0.0.1/web/powerstate?newstate=3
 else
 	echo "¡Conexión a internet NOK!"

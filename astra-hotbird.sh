@@ -27,7 +27,7 @@ then
 	rm -rf /tmp/tuxbox /tmp/enigma2 /tmp/astra-hotbird.tar.gz /etc/enigma2/*.del
 	## Lamedb & Bouquet Reload ##
 	wget -qO - http://127.0.0.1/web/servicelistreload?mode=0
-	echo "¡Canales astra actualizados con éxito!"
+	echo "¡Canales astra-hotbird actualizados con éxito!"
 	sleep 5s
 	wget -O /dev/null -q http://127.0.0.1/web/powerstate?newstate=3
 else

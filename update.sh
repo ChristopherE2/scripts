@@ -1,8 +1,8 @@
 #!/bin/bash
 # Provides: ChristopherE2
 # Description: Script para actualizaciones de scripts
-# Version: 2.2
-# Date: 20/09/2022
+# Version: 3.0
+# Date: 23/09/2022
 
 URL_EPG="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/epg.sh"
 URL_PICON="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/picon.sh"
@@ -16,8 +16,9 @@ if [ $? -ne 1 ];
 then
 	echo "¡Conexión a internet OK!"
 	## Scripts Remove ##
-	rm -rf /usr/script/*
+	rm -rf /usr/script
 	## Scripts Install ##
+	mkdir /usr/script
 	cd /usr/script
 	wget $URL_EPG
 	wget $URL_PICON

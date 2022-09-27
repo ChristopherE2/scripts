@@ -1,28 +1,29 @@
 #!/bin/bash
 # Provides: ChristopherE2
 # Description: Script para instalación de CCcam.Mips
-# Version: 1.0
+# Version: 2.0
 # Date: 27/09/2022
 
-URL_BIN="https://github.com/ChristopherE2/CCcam/raw/main/Mipsel/CCcam.Mips"
-URL_SCRIPT="https://github.com/ChristopherE2/CCcam/raw/main/Mipsel/softcam.CCcam.Mips"
-URL_LIB="https://github.com/ChristopherE2/CCcam/raw/main/Mipsel/libgcc_s.so.1"
+URL_CCCAM="https://github.com/ChristopherE2/CCcam/archive/refs/heads/main.zip"
 
 ping -c 1 github.com
 if [ $? -ne 1 ];
 then
 	echo "¡Conexión a internet OK!"
+	## CCcam download ##
+	cd /tmp
+	wget $URL_CCCAM
+	unzip main.zip
 	## Bin Install ##
-	cd /usr/bin
-	wget $URL_BIN
-	chmod 755 CCcam.Mips
+	mv /tmp/CCcam-main/Mipsel/CCcam.Mips /usr/bin
+	chmod 755 /usr/bin/CCcam.Mips
 	## Script Install ##
-	cd /etc/init.d
-	wget $URL_SCRIPT
-	chmod 755 softcam.CCcam.Mips
+	mv /tmp/CCcam-main/Mipsel/softcam.CCcam.Mips /etc/init.d
+	chmod 755 /etc/init.d/softcam.CCcam.Mips
+	## Config Install ##
+	mv /tmp/CCcam-main/Config/* /etc
 	## Lib Install ##
-	cd /lib
-	wget $URL_LIB
+	mv /tmp/CCcam-main/Mipsel/libgcc_s.so.1 /lib
 	echo "¡Se ha instalado CCcam.Mips con éxito!"
 	echo "Reiniciando decodificador en 5 ..."
 	sleep 1s

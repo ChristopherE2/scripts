@@ -5,8 +5,8 @@
 # Date: 30/10/2022
 
 URL_EPG="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/epg.sh"
-URL_CROSSEPG_ARM="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/crossepg_arm.sh"
-URL_CROSSEPG_MIPS="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/crossepg_mips.sh"
+URL_CROSSEPGARM="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/crossepg-arm.sh"
+URL_CROSSEPGMIPS="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/crossepg-mips.sh"
 URL_PICON="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/picon.sh"
 URL_PICONINTERNAL="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/piconinternal.sh"
 URL_ASTRA="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/astra.sh"
@@ -22,8 +22,8 @@ then
 	## Scripts Install ##
 	cd /usr/script
 	wget $URL_EPG
-	wget $URL_CROSSEPG_ARM
-	wget $URL_CROSSEPG_MIPS
+	wget $URL_CROSSEPGARM
+	wget $URL_CROSSEPGMIPS
 	wget $URL_PICON
 	wget $URL_PICONINTERNAL
 	wget $URL_ASTRA

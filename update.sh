@@ -1,8 +1,8 @@
 #!/bin/bash
 # Provides: ChristopherE2
 # Description: Script para actualizaciones de scripts
-# Version: 3.2
-# Date: 30/10/2022
+# Version: 3.3
+# Date: 16/11/2022
 
 URL_EPG="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/epg.sh"
 URL_CROSSEPGARM="https://raw.githubusercontent.com/ChristopherE2/update/main/scripts/crossepg-arm.sh"
@@ -18,8 +18,9 @@ if [ $? -ne 1 ];
 then
 	echo "¡Conexión a internet OK!"
 	## Scripts Remove ##
-	rm -rf /usr/script/*
+	rm -rf /usr/script
 	## Scripts Install ##
+	mkdir /usr/script
 	cd /usr/script
 	wget $URL_EPG
 	wget $URL_CROSSEPGARM
